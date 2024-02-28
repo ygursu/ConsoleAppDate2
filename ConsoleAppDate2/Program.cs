@@ -1,0 +1,13 @@
+﻿DateTime zaman;
+zaman = new DateTime();
+zaman = DateTime.Now;
+Console.WriteLine("Bu günün tarihi:" + zaman.ToString());
+Console.Write("Doğum tarihinizi giriniz:");
+DateTime dogumtarihi;
+dogumtarihi = Convert.ToDateTime(Console.ReadLine());
+TimeSpan gün = zaman - dogumtarihi;
+double toplamgün = gün.Days;
+Console.WriteLine(toplamgün + " Günlüksünüz");
+int yas = zaman.Year - dogumtarihi.Year;
+Console.WriteLine(yas + " yaşındasınız");
+Console.ReadKey();
